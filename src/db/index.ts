@@ -1,8 +1,3 @@
-import { drizzle } from 'drizzle-orm/bun-sqlite';
-import { $ } from 'bun';
-
-if (process.env.NODE_ENV === "production") {
-    await $`bun db:migrate`;
-}
+import { drizzle } from "drizzle-orm/bun-sqlite";
 
 export default drizzle(process.env.DB_FILE_NAME);
