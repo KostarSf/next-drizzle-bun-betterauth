@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "bun ./scripts/prestart.ts && bun --bun next dev --turbopack",
     "build": "bun --bun next build",
-    "start": "bun ./scripts/prestart.ts && bun --bun next start",
+    "start": "NODE_ENV=production bun ./scripts/prestart.ts && bun --bun next start",
     "lint": "bun --bun next lint",
     "db:generate": "bunx --bun drizzle-kit generate --dialect sqlite --casing snake_case --schema ./src/db/schema.ts",
     "db:migrate": "bun ./scripts/migrate.ts",
@@ -13,11 +13,14 @@
     "db:auth-generate": "bunx --bun @better-auth/cli generate --output ./src/db/schema.auth.ts"
   },
   "dependencies": {
+    "@uploadthing/react": "^7.3.1",
     "better-auth": "^1.2.8",
     "drizzle-orm": "^0.44.1",
     "next": "15.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.3.0",
+    "uploadthing": "^7.7.2",
     "zod": "^3.25.51"
   },
   "devDependencies": {

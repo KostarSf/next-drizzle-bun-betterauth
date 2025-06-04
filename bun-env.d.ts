@@ -3,5 +3,6 @@ declare module "bun" {
 		DB_FILE_NAME: string;
 		BETTER_AUTH_SECRET: string;
 		BETTER_AUTH_URL: string;
+		UPLOADTHING_TOKEN: string;
 	}
 }
